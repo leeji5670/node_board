@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>web</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		.content {
+			cursor: pointer;
+		}
+	</style>
+  </head>
+  <body>
+  	<header class="text-center">
+		<a class="title" href="/">Title</a>
+	</header>
+	<br>
+	<h1>게시판</h1>
+	<form action="/report" method="post">
+	<table width="100%">
+		<thead>
+			<tr>
+				<td width="130">번호</td>
+				<td width="*">제목</td>
+				<td width="190">날짜</td>
+				<td width="60">조회</td>
+				<td width="60">선택</td>
+			</tr>
+		</thead>
+		<tbody>
+			<%
+				for(var i=0; i<youn.length; i++)
+				{
+					var youn_ = youn[i];
+			%>
+				<tr>
+					<td><%=youn_.idx%></td>
+					<td class="content" onclick="location.href='/report/content/<%=youn_.idx%>';"><%=youn_.title%></td>
+					<td><%=youn_.date%></td>
+					<td><%=youn_.hit%></td>
+					<td><input type="checkbox" id="idx" name="idx" value="<%=youn_.idx%>"></td>
+				</tr>
+			<%}%>
+		</tbody>
+	</table>
+	<div>
+		<input type="submit" value=" 게시물 삭제 ">
+		<input type="button" value=" 게시물 작성 " onclick="location.href='/report/board';">
+	</div>
+	</form>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-weight: normal;
+}
+table {
+	border-spacing: 0;
+}
+thead tr:first-child td {
+	border-top: 2px solid #cecece;
+	border-bottom: 2px solid #cecece;
+}
+td {
+	border-bottom: 1px solid #cecece;
+	padding: 5px 0 5px 0;
+}
+tr {
+	text-align: center;
+}
+.text_center {
+	text-align: center;
+}
+input[type=text], textarea {
+	width: 99%;
+}
+input[type=button], input[type=submit] {
+	cursor: pointer;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header {
+  border-bottom: 1px solid #cecece;
+}

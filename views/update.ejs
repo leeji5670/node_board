@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>web</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<header class="text-center">
+		<a class="title" href="/">Title</a>
+	</header>
+	<br>
+	<h1>게시판 내용</h1>
+	<form action="/report/update" method="post">
+	<table width="100%">
+		<input type="hidden" name="idx" value="<%=result.idx%>"/>
+		<thead>
+			<tr>
+				<td>제목</td>
+				<td><input type="text" name="title" id="title" value="<%=result.title%>" required/></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>내용</td>
+				<td><textarea name="content" id="content" cols="30" rows="10" required/><%=result.content%></textarea></td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<input type="submit" value=" 확인 ">
+		<input type="button" value=" 취소 " onclick="location.href='/report'">
+	</div>
+	</form>
+  </body>
+</html>

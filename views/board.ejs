@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>web</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<header class="text-center">
+		<a class="title" href="/">Title</a>
+	</header>
+	<br>
+	<h1>Write</h1>
+	<form action="/report/board" method="post">
+	<table width="100%">
+		<thead>
+			<tr>
+				<td>제목</td>
+				<td><input type="text" name="title" id="title" required/></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>내용</td>
+				<td><textarea name="content" id="content" cols="30" rows="10" required/></textarea></td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<input type="submit" value=" 작성 ">
+	</div>
+	</form>
+  </body>
+</html>
